@@ -1,0 +1,17 @@
+{
+  "name": "sharp-timeout",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "process.js",
+  "scripts": {
+    "start": "node process.js",
+    "test": "node process.js"
+  },
+  "keywords": [],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "description": "Test repo showing bug(?) in sharp when using `timeout()`",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
