@@ -15,8 +15,10 @@ for (const timeout of timeouts) {
         .toFormat(format, {effort: 6})
         .toFile(`./output/output.${format}`)
 
-      if (Date.now() - start > timeout * 1000) {
-        console.error('    ❌ Exceeded timeout of %d seconds without failing', timeout)
+      const timeSpent = Date.now() - start
+      const timeoutMs = timeout * 1000
+      if (timeSpent > timeoutMs) {
+        console.error('    ❌ Exceeded timeout by %d milliseconds without failing', timeSpent - timeoutMs)
       } else {
         console.log('    ✅ Processed image in less than %d seconds', timeout)
       }
